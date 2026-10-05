@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patryk gorzelak">
+    <meta name="robots" content="noindex, nofollow">
+    <title>formularz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 5-20 haslo adres required tel patern 123-123-123 wiek od 18 lat
+     przesówmay sówak o jedeen wybor koloru znane technologie domyślnie zaznaczony html
+     text area domyslnie na cala szerokosc formularza. zdjecie wiecej niż 1, mozliwosc dodania wiecej niz jednego
+     (multiply) akceptuje regulamin required domyslnie nie jest zaznaczony, wyczysc input reset, zmienic przezroczystosc na hover na przyciski
+     przycisk js wysyla info ze przycisk klikniety zostal, strona nie indeksowana roboty nie przez linki, ustawic authora-->
+     <div class="container">
+        <header><h1>Kompletny formularz HTML5</h1></header>
+        <form>
+            <fieldset>
+                <legend> 1. Dane osobowe i tekstowe (Pola text input)</legend>
+                <div>
+                    <label>Nazwa użytkownika (text + min/max length):</label>
+                    <input type="text" minlength="5" maxlength="20" title="wypełnij to pole" placeholder="np. jan_kowalski" required>
+                </div>
+                <div>
+                    <label>Hasło (password):</label>
+                    <input type="password" title="wypełnij to pole" required>
+                </div>
+                <div>
+                    <label>Adres E-mail (email):</label>
+                    <input type="email" placeholder="jan@domena.pl" title="wypełnij to pole" required>
+                </div>
+                <div>
+                    <label>Numer telefonu (tel + pattern):</label>
+                    <input type="tel" placeholder="123-456-789"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+                </div>
+                <div>
+                    <label>Strona internetowa (url):</label>
+                    <input type="url" placeholder="https://example.com">
+                </div>
+                <div>
+                    <label>Wyszukiwarka (search):</label>
+                    <input type="search" placeholder="Szukaj na stronie...">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend> 2. Wartości liczbowe, Zakresy i kolor</legend>
+                <div>
+                    <label>Wiek (number):</label>
+                    <input type="number" min="18" placeholder="18">
+                </div>
+                <div>
+                    <label>Poziom satysfakcji (range)</label>
+                    <input type="range" step="1" min="0" max="100" value="50">
+                </div>
+                <div>
+                    <label>Ulubiony kolor (color):</label>
+                    <input type="color" id="kolor">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend> 3. Pola Daty i czasu (Date & Time)</legend>
+                <div>
+                    <label> Data urodzenia (date):</label>
+                    <input type="date">
+                </div>
+                <div>
+                    <label> Czas spotkania (time):</label>
+                    <input type="time">
+                </div>
+                <div>
+                    <label>Data i godzina (datetime-local)</label>
+                    <input type="datetime-local">
+                </div>
+                <div>
+                    <label> Miesiąć (month):</label>
+                    <input type="month">
+                </div>
+                <div>
+                    <label>tydzień (week):</label>
+                    <input type="week">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend> 4. Wybpory i Listy (Select, Radio, Checkbox, Datalist)</legend>
+                <div>
+                    <label> Kraj (Select + optgroup):</label>
+                    <select name="kraje" id="kraje_id">
+                        <optgroup label="Europa">
+                            <option>Polska</option>
+                            <option>Niemcy</option>
+                            <option>Francja</option>
+                        </optgroup>
+                        <optgroup label="Ameryka Północna">
+                            <option>Stany Zjednoczone</option>
+                            <option>Kanada</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label>Przeglądarka (input + datalist)</label>
+                    <input list="przegladarki" placeholder="Zacznij pisać...">
+                    <datalist id="przegladarki">
+                        <option>firefox</option>
+                        <option>Chrome</option>
+                        <option>Edge</option>
+                        <option>Opera</option>
+                        <option>Safari</option>
+                    </datalist>
+                </div>
+                <div class="special">
+                    <label>Poziom wykształcenia (input type="radio"):</label> <br>
+                    <input type="radio" name="szkola" id="podstawowe">
+                    <label for="podstawowe">Podstawowe</label>
+                    <input type="radio" name="szkola" id="Średnie">
+                    <label for="podstawowe">Średnie</label>
+                    <input type="radio" name="szkola" id="Wyższe">
+                    <label for="podstawowe">Wyższe</label>
+                </div>
+                <div class="special">
+                    <label>Znane technologie (input ytpew= "checklist")</label> <br>
+                    <input type="checkbox" id="html" checked>
+                    <label for="html">HTML5</label>
+                    <input type="checkbox" id="CSS3">
+                    <label for="CSS3">CSS3</label>
+                    <input type="checkbox" id="JavaScript">
+                    <label for="JavaScript">JavaScript</label>
+                    <input type="checkbox" id="PHP">
+                    <label for="PHP">PHP</label>
+                </div>
+            </fieldset>
+            <fieldset class="special_field">
+                <legend> 5. Pliki, Wielo-wierszowy tekst i inne</legend>
+                <div id="strefa">
+                    <label>O sobie / biogradia (textarrea):</label>
+                    <textarea placeholder="Napisz o sobie kilka słów"></textarea>
+                </div>
+                <div>
+                    <label>Załącz zdjęcie (file):</label>
+                    <input type="file" multiple>
+                </div>
+                <div class="special">
+                    <input type="checkbox" id="regulamin" required>
+                    <label for="regulamin">Akceptuje regulamin serwisu (pole wymagane)</label>
+                </div>
+            </fieldset>
+            <div class="przyciski special">
+                <button id="reset" type="reset">Wyczyść formularz</button>
+                <button id="js"> Przycisk JS (input)</button>
+                <button id="submit" type="submit">Wyślij formularz</button>
+            </div>
+            
+            </form>
+     </div>
+</body>
+</html>
