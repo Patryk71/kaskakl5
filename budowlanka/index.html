@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="author" content="Patryk Gorzelak">
+    <title>BUD-MEX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- grid + flex 100kb zdjecia, sekcja/aside + sekcja + sekcja. raczej sekcje. 
+     powierzchnia min 10m2 nav klikniete zielone najechane ten sam zielony po stronie 
+     klienta domyślnie zaznaczone kontakt klikalne, klik w telefon otwiera telefon, w maila otwiera 
+     outlooka czy coś, formularz ma obowoiiazkowe rzeczy+ dodac znaczek ze akceptuje rodo, w formularzu maja byc inpput:submit/reset
+     responsywnosc: min max, min=200px gdy osiagnie 200 ps maja ukladac sie jedne pod drugim
+     grid 5 kolumn ? jakims cudem
+     ekran < 500 px obrazy znikają-->
+    <header>
+        <h1>Firma Remonotwo-Budowlana "BUD-MEX"</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="selected"><a href="#">Strona Główna</a></li>
+            <li><a href="">Kalkulator Usług</a></li>
+            <li><a href="">Cennik i Konatakt</a></li>
+        </ul>
+    </nav>
+    <section id="left">
+        <h3>Menu Boczne</h3>
+        <ul>
+            <li><a href="#">O firmie</a></li>
+            <li><a href="#">Certyfikaty</a></li>
+            <li><a href="#">Nasi partnerzy</a></li>
+            <li><a href="#">Gwarancja jakosci</a></li>
+        </ul>
+    </section>
+    <main>
+        <h2>Witamy na naszej stronie !</h2>
+        <p>Świadczymy profesjonalne usługi remontowe i wykończeniowe na terenie całego województwa. Gwarantujemy terminowość oraz najwyższą jakść wykonania.</p>
+        <h3>Zakres naszych prac:</h3>
+        <table>
+            <tr>
+                <th>Usługa</th>
+                <th>Czas realizacji</th>
+            </tr>
+            <tr>
+                <td>Malowanie ścian</td>
+                <td>1 - 2 dni</td>
+            </tr>
+            <tr>
+                <td>Układanie paneli</td>
+                <td>1 -3 dni</td>
+            </tr>
+            <tr>
+                <td>Montaż instalacji</td>
+                <td>2 - 5 dni</td>
+            </tr>
+        </table>
+        <h3>Ostatnie realizacje</h3>
+        <div class="galeria">
+            <img src="./zdj/zdj1.jpg" alt="montaz">
+            <img src="./zdj/zdj2.jpg" alt="montaz">
+            <img src="./zdj/zdj3.jpg" alt="montaz">
+        </div>
+    </main>
+    <section id="right">
+        <h3>Godziny otwarcia</h3>
+        <span><b>PN - PT</b> 8:00 - 17:00</span>
+        <span><b>Sobota</b> 9:00 - 14:00</span>
+        <span><b>Niedziela</b> Zamknięte</span>
+    </section>
+    <footer>
+        <p>Autor strony: <b>Patryk Gorzelak</b></p>
+    </footer>
+</body>
+</html>
